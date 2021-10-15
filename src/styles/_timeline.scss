@@ -1,0 +1,74 @@
+.timeline {
+  border-left: $line-width solid $timeline-bg;
+  padding: 1rem 0 15px 0;
+}
+
+.timeline-action {
+  &.highlight {
+    .card-header {
+      background: darkturquoise;
+    }
+
+    .alert {
+      background: darkturquoise !important;
+    }
+  }
+
+  .card-header .actions {
+    float: right;
+    line-height: 24px;
+  }
+
+  position: relative;
+  margin-left: $line-distance;
+  margin-bottom: 1rem;
+
+  .timeline-dot {
+    background: $purple;
+    position: absolute;
+    left: - ($line-distance + $dot-size/2 + $line-width/2);
+    top: (49 - $dot-size)/2;
+    height: $dot-size;
+    width: $dot-size;
+    border: $line-width solid $body-bg;
+    border-radius: 50%;
+
+    &.dot-red {
+      background: $red;
+    }
+
+    &.dot-green {
+      background: $green;
+    }
+
+    &.dot-orange {
+      background: $orange;
+    }
+  }
+
+  .card {
+    overflow: hidden;
+  }
+}
+
+tr.form-group {
+  background: $info;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7em;
+
+  td {
+    width: 5px;
+    padding: 0;
+  }
+}
+
+.head-container {
+  background: white;
+  border: 3px solid $timeline-bg;
+  padding: 0 20px;
+  .text-primary {
+    padding: 20px 20px;
+    color: $black-light !important;
+  }
+}

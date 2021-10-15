@@ -1,0 +1,63 @@
+ul.activity-list {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 0;
+  margin-bottom: 0;
+
+  & > li {
+    list-style: none;
+    a {
+      display: flex;
+      cursor: pointer;
+      text-decoration: none;
+      padding-top: 5px;
+
+      &:link, &:visited {
+        color: $gray-900;
+      }
+
+      & > div {
+        line-height: $activity-listitem-size - 5px;
+        display: flex;
+      }
+    }
+
+    &:hover {
+      background: lighten($purple, 40);
+    }
+
+    &.active {
+      cursor: default;
+      background: $purple;
+
+      color: $gray-100;
+      a:link, a:visited {
+        color: $gray-100;
+      }
+    }
+
+    .activity-name {
+      padding-left: 30px;
+      flex-grow: 1;
+    }
+
+    .activity-caret {
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+    }
+  }
+}
+
+.full-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-desc {
+  background-color: #D3D3D3;
+  padding:10px;
+  border-radius: 5px;
+  margin-bottom:15px;
+}
