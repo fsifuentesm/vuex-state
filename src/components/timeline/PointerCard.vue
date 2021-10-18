@@ -89,7 +89,7 @@
           >
             <icon :icon="['fas', 'user-tag']"/>
             <small>
-              <span><b>Asignada a {{ assignees.length }}</b></span>
+              <span><b>Asignada a {{ assignees.length }}  <task/></b></span>
             </small>
           </a>
 
