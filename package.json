@@ -1,28 +1,17 @@
 {
   "name": "cascara",
-  "description": "GUI for cacahuate",
   "version": "3.7.2",
+  "description": "GUI for cacahuate",
   "author": "The cascara authors (https://github.com/tracsa/cascara/graphs/contributors)",
-  "contributors": [
-    "Tracsa SAPI"
-  ],
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "e2e": "node test/e2e/runner.js",
+    "start": "npm run dev",
+    "test": "npm run unit && npm run e2e",
+    "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tracsa/cascara.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tracsa/cascara/issues"
-  },
-  "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
     "@fortawesome/fontawesome-free-brands": "^5.0.8",
@@ -45,9 +34,11 @@
     "vue-router": "^3.0.6",
     "vue-sse": "^2.2.0",
     "vuejs-datepicker": "^0.9.29",
+    "vuex": "^3.4.0",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
+    "@vue/cli-plugin-vuex": "~4.5.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.6",
@@ -103,13 +94,24 @@
     "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.2.1"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/tracsa/cascara/issues"
+  },
+  "contributors": [
+    "Tracsa SAPI"
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tracsa/cascara.git"
+  }
 }
