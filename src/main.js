@@ -16,7 +16,7 @@ import i18n from './i18n';
 import UserServicePlugin from './services/user.service';
 import PointerServicePlugin from './services/pointer.service';
 import ExecutionServicePlugin from './services/execution.service';
-import store from './store'
+import store from './store';
 
 Vue.use(UserServicePlugin);
 Vue.use(PointerServicePlugin);
@@ -44,5 +44,5 @@ new Vue({
   i18n,
   components: { App },
   store,
-  template: '<App/>'
+  template: '<App/>',
 });
