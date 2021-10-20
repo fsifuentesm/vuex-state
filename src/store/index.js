@@ -6,10 +6,31 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    tasks,
+
+    tasks: {
+      errors: [],
+      loading: false,
+      data: {
+        vDBIoE0oUIF: {
+          id: 'vDBIoE0oUIF',
+          description: 'Esta es una descripción',
+          name: 'Título de la tarea',
+          startedAt: '2021-10-18T15:12:21.558000+00:00',
+        },
+      },
+    },
+    inboxList: {
+      errors: [],
+      loading: false,
+      data: [
+        'vDBIoE0oUIF',
+      ],
+    },
+
   },
   getters: {
-    currentTask: state => state.tasks[0],
+    currentTask: state => state.tasks,
+    test: state => state.inboxList.data.map(cid => tasks.data[cid]),
   },
   mutations: {
     UPDATE_TASK(state, newPricing) {
@@ -21,7 +42,5 @@ export default new Vuex.Store({
     },
   },
   actions: {
-  },
-  modules: {
   },
 });

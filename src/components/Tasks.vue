@@ -5,7 +5,7 @@
         <i class="fas fa-dollar-sign fa-4x"></i>
       </div>
       <div class="col-10 text-right">
-        <h2>{{(task.message)}}</h2>
+        <h2>{{(task.data['vDBIoE0oUIF'].description)}}</h2>
       </div>
     </div>
   </div>
